@@ -1,28 +1,19 @@
 // Bootstrap overrides for this template
-.btn {
-  font-size: 14px;
-  font-weight: 800;
-  padding: 15px 25px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 0;
-  @include sans-serif-font;
+.text-primary {
+  color: $theme-primary !important;
 }
 
 .btn-primary {
+  font-weight: 700;
   @include button-variant(white, $theme-primary, $theme-primary);
+  @include heading-font;
 }
 
-.btn-lg {
-  font-size: 16px;
-  padding: 25px 35px;
-}
-
-.btn-default {
-  &:focus,
-  &:hover {
-    color: white;
-    border: 1px solid $theme-primary;
-    background-color: $theme-primary;
-  }
+.btn-xl {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 3px;
+  @include button-variant(white, $theme-primary, $theme-primary);
+  @include heading-font;
 }
