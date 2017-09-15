@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Team-Holiday Product website</title>
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
-
+    <!-- leaflet library -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"> 
+    <link rel="stylesheet" type="text/css" href="MapStyle.css">
   </head>
 
   <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img alt="" src="img/logo2.png" style="width:60px;  heigh:60px; display:inline-block;">NEW START</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-     
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <!-- REMEMBER TO CHANGE WHEN THE NAME OF WEBSITE IS COME OUT -->
-              <a class="nav-link js-scroll-trigger" href="https://deco3801-team-holiday.uqcloud.net/">Website</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#feature">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"><img alt="" src="img/logo2.png" style="width:60px;  heigh:60px; display:inline-block;">NEW START</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="https://deco3801-team-holiday.uqcloud.net/">Website</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="index.html#product">Vedio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="index.html#feature">Features</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="index.html#team">Team</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
+                  </li>
+              </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <!-- Header -->
@@ -66,411 +62,302 @@
         </div>
       </div>
     </header>
-
-
+    <div class="map" id='map'></div>
+    
     <!-- Product -->
+    <section id="product" style='padding-top: 80px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Introduction vedio</h2>
+                    <div style="float:left; margin: 30px 30px 30px 100px">
+                        <iframe width="420" height="315" src="http://www.youtube.com/embed/bIGAqtmgJoM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div style="margin: 60px 100px 30px 10px">
+                        <p>
+                            Do you have a passion for <b>working</b> with Culturally and Linguistically Diverse communities?       
+                            Do you want to rent a beautiful <b>house</b> with lowest budget? 
+                            Are you looking for <b>courses</b>, workshops or trainings for better job opportunities?
+                            <br><br>
+                            <b style="color:#fec301">NEW START</b> provides over 10000 job opportunities, education and accommodations for you. 
+                            Take your first step to settle down in Australia by using <b style="color:#fec301">NEW START</b>.
+                            Let opportunities come to you and your family!
+                        </p>
+                    </div>
+                        <!-- leaflet library -->
+                        <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+                        <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script> 
+                        <script type="text/javascript" src='MapScript.js'></script>
+                    <!-- Row for Refegee and offeroer icon-->
+                    <div class="row text-center" style="margin-top: 150px;">
+                        <div class="col-md-5">
+                            <h4 class="service-heading">If you are an Offeror</h4>
+                            <!--icon for refugee-->
+                            <img class="rounded-circle img-fluid" src="" alt="">
+                        </div>
+                        <div class="col-md-5">
+                            <h4 class="service-heading">If you are a Refugee</h4>
+                            <!--icon for offeror-->
+                            <img class="rounded-circle img-fluid" src="" alt="">
+                        </div>
+                    </div>
 
-    <section id="product">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
+                    <!-- Row for Job-->
+                    <div class="row text-center">
+                        <div class="col-md-5">
+                            <h4 class="service-heading">Post Job Ads</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-briefcase fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-5">
+                          <h4 class="service-heading">Search For Jobs</h4>
+                          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </div>
+                    <br><br>
 
-            <h2 class="section-heading">Introduction</h2>
+                    <!-- Row for Education-->
+                    <div class="row text-center">
+                        <div class="col-md-5">
+                            <h4 class="service-heading">Education</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                         </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-5">
+                            <h4 class="service-heading">Education</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                          </div>
+                    </div>
+                    <br>
+                    <br>
 
-            <h3 class="section-subheading text-muted">
-                        Do you want to rent a beautiful <b>house</b> with lowest budget?<br> 
-                        Are you looking for <b>courses</b>, workshops or trainings for better job opportunities?<br>
-                        Do you have a passion for <b>working</b> with Culturally and Linguistically Diverse communities?<br>
-                        <br>
-                        <b>NEW START</b> provides over 10000 job opportunities, education and accommodations for you. <br>
-                        Take your first step to settle down to Australia by using <b>NEW START</b>.<br>
-                        Let opportunities come to you and your family!
-            </h3>
-          </div>
+                    <!-- Row for Accommodation-->
+                    <div class="row text-center">
+                        <div class="col-md-5">
+                            <h4 class="service-heading">Rent</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-5">
+                            <h4 class="service-heading">Rent</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Row for Refegee and offeroer icon-->
-        <div class="row text-center">
-          <div class="col-md-5">
-
-            <h4 class="service-heading">If you are an Offeror</h4>
-
-            <!--icon for refugee-->
-            <img class="rounded-circle img-fluid" src="" alt="">
-          </div>
-
-          <div class="col-md-2">
-
-          </div>
-          <div class="col-md-5">
-
-            <h4 class="service-heading">If you are a Refugee</h4>
-
-            <!--icon for offeror-->
-            <img class="rounded-circle img-fluid" src="" alt="">
-          </div>
-
-        </div>
-
-        <!-- Row for Job-->
-
-        <div class="row text-center">
-          <div class="col-md-5">
-
-            <h4 class="service-heading">Post Job Ads</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-2">
-
-            <img class="rounded-circle img-fluid" src="img/icons/job.png" alt="">
-
-          </div>
-          <div class="col-md-5">
-
-            <h4 class="service-heading">Search For Jobs</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-        <br>
-        <br>
-
-        <!-- Row for Education-->
-
-        <div class="row text-center">
-          <div class="col-md-5">
-
-            <h4 class="service-heading">Education</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-2">
-
-            <img class="rounded-circle img-fluid" src="img/icons/course.png" alt="">
-
-          </div>
-          <div class="col-md-5">
-
-            <h4 class="service-heading">Education</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-        <br>
-        <br>
-
-
-        <!-- Row for Accommodation-->
-
-        <div class="row text-center">
-          <div class="col-md-5">
-
-            <h4 class="service-heading">Rent</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-2">
-
-            <img class="rounded-circle img-fluid" src="img/icons/accommodation.png" alt="">
-
-          </div>
-          <div class="col-md-5">
-            <h4 class="service-heading">Rent</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-      </div>
     </section>
+    
     <!-- Core feature -->
-    <section id="feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-
-            <h2 class="section-heading">Features</h2>
-
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
+    <section id="feature" style="padding-top: 80px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Features</h2>
+                    <h3 class="section-subheading text-muted">We also provide three features to closely ties you and your ideal application.</h3>
+                  </div>
+            </div>
+            <div class="row text-center" style="padding-top: 45px;">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-bell-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Notification</h4>
+                    <p class="text-muted">This NOTIFICATION in the dashboard will offers you an approach to track application's process and messages, we won't let you miss out any important message.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">My Applications</h4>
+                    <p class="text-muted">If you are an applier, we designed this function in your dashboard to view the details of the application you just applied. </p>
+                </div>
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">View all Applicants</h4>
+                  <p class="text-muted">If you are an offorer, we designed this function in your dashboard to list how many people applied your advertisement and their details.</p>
+                </div>
+            </div>
         </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Notification</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">My Applications</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">My Applicants</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-      </div>
     </section>
-
 
     <!-- Team -->
-    <section class="bg-light" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
+    <section class="bg-light" id="team" style="padding-top: 60px;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team Holiday</h2>
+                    <h1 class="section-subheading text-muted"></h1>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 40px;">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/1.png" alt="">
+                        <h4>Jiajing Sun</h4>
+                        <p class="text-muted">Scrum master<br>The University of Queensland <br> Master of Interaction design<br>UX, Front-end Engineering</p> 
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/2.png" alt="">
+                        <h4>Shengjie Xu</h4>
+                        <p class="text-muted"> </p> 
+                        <p class="text-muted">The University of Queensland <br> Master of Information technology<br>Front-end and Back-end Engineering</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/3.png" alt="">
+                        <h4>Jing Zhang</h4>
+                        <p class="text-muted"> </p> 
+                        <p class="text-muted">The University of Queensland <br> Master of Information technology <br> Front-end and Back-end Engineering </p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/4.png" alt="">
+                        <h4>Yonglin Chen</h4>
+                        <p class="text-muted"> </p> 
+                        <p class="text-muted">The University of Queensland <br> Master of Interaction design <br> UX, Front-end engineering</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/5.png" alt="">
+                        <h4>Jinbo Shen</h4>
+                        <p class="text-muted"> </p> 
+                        <p class="text-muted">The University of Queensland <br> Master of Information technology <br> Database Architect and Back-end Engineering</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/6.png" alt="">
+                        <h4>Bowen Li</h4>
+                        <p class="text-muted"> </p> 
+                        <p class="text-muted">The University of Queensland <br> Master of Information technology <br> Back-end Engineering and Testing</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.png" alt="">
-              <h4>Jiajing Sun</h4>
-              <p class="text-muted">Lead Designer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.png" alt="">
-              <h4>Holly Xu</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.png" alt="">
-              <h4>Izzy Zhang</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/4.png" alt="">
-              <h4>Yonglin Tan</h4>
-              <p class="text-muted">Lead Designer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/5.png" alt="">
-              <h4>Jinbo Shen</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/6.png" alt="">
-              <h4>Bowen Li</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Clients -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Please enter your name.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
+    <section id="contact" style="padding-top: 80px;">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-xl" type="submit">Send Message</button>
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted" style="padding-bottom: 30px">Leave any message that you want to tell us</h3>
                 </div>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="sentMessage" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="name" type="text" placeholder="Please enter your name">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone (Optional)">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                                <button id="sendMessageButton" class="btn btn-xl" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4" style="text-align:center;">
-            <span class="copyright" style="text-align:center;">Copyright &copy; DECO7381 Design Computing Studio 3 --- Team holiday 2017</span>
-          </div>
+        <div class="container">
+            <div class="row" style="margin-left: 260px;">
+                <div>
+                    <span class="copyright">Copyright &copy; DECO7381 Design Computing Studio 3 --- Team holiday 2017</span>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
 
 
@@ -479,17 +366,13 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
-
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
-  </body>
-
+  
+    </body>
 </html>
