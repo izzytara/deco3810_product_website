@@ -18,7 +18,7 @@
     <link href="css/agency.min.css" rel="stylesheet">
     <!-- leaflet library -->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"> 
-    <link rel="stylesheet" type="text/css" href="MapStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/MapStyle.css">
   </head>
 
   <body id="page-top">
@@ -32,10 +32,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="https://deco3801-team-holiday.uqcloud.net/">Website</a>
+                      <a class="nav-link js-scroll-trigger" href="https://deco3801-team-holiday.uqcloud.net/">Dashboard</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="index.html#product">Vedio</a>
+                      <a class="nav-link js-scroll-trigger" href="index.html#product">Introduction</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link js-scroll-trigger" href="index.html#feature">Features</a>
@@ -57,53 +57,85 @@
         <div class="intro-text">
           <div class="intro-lead-in">DECO7381 Design Computing Studio 3</div>
           <div class="intro-heading">So Nice To Meet You</div>
-          <a class="btn btn-xl js-scroll-trigger" href="https://deco3801-team-holiday.uqcloud.net/">Show me the website</a>
+          <a class="btn btn-xl js-scroll-trigger" href="https://deco3801-team-holiday.uqcloud.net/">Create your own dashboard</a>
           <br><br><br>
         </div>
       </div>
     </header>
-    <div class="map" id='map'></div>
-    
     <!-- Product -->
-    <section id="product" style='padding-top: 80px;'>
+    <section id="product" style='padding-top: 80px; padding-bottom: 20px;'>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Introduction vedio</h2>
-                    <div style="float:left; margin: 30px 30px 30px 100px">
-                        <iframe width="420" height="315" src="http://www.youtube.com/embed/bIGAqtmgJoM" frameborder="0" allowfullscreen></iframe>
+                    <h2 class="section-heading">Introduction</h2>
+                    <div class="intro_one">
+                        <div class="intro_one_vedio">
+                            <iframe width="420" height="315" src="http://www.youtube.com/embed/bIGAqtmgJoM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+						<div class="intro_one_p">
+							<p>
+                                                            Currently, there is very few integrated service to resettle people in new areas,
+                                                            and lack of government support for refugees to seek job, accommodation and education.
+                                                            <br><br>
+                                                            If you have a passion for <b style="color:#fec301">working</b> with culturally and linguistically Diverse communities.<br>       
+                                                            if you want to rent a beautiful <b style="color:#fec301">house</b> with lowest budget. <br> 
+                                                            if you are looking for <b style="color:#fec301">courses</b>, workshops or trainings for better job opportunities.
+							
+                                                                
+								
+							</p>
+						</div>
                     </div>
-                    <div style="margin: 60px 100px 30px 10px">
-                        <p>
-                            Do you have a passion for <b>working</b> with Culturally and Linguistically Diverse communities?       
-                            Do you want to rent a beautiful <b>house</b> with lowest budget? 
-                            Are you looking for <b>courses</b>, workshops or trainings for better job opportunities?
-                            <br><br>
-                            <b style="color:#fec301">NEW START</b> provides over 10000 job opportunities, education and accommodations for you. 
-                            Take your first step to settle down in Australia by using <b style="color:#fec301">NEW START</b>.
-                            Let opportunities come to you and your family!
-                        </p>
-                    </div>
-                        <!-- leaflet library -->
-                        <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
-                        <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script> 
-                        <script type="text/javascript" src='MapScript.js'></script>
-                    <!-- Row for Refegee and offeroer icon-->
-                    <div class="row text-center" style="margin-top: 150px;">
-                        <div class="col-md-5">
-                            <h4 class="service-heading">If you are an Offeror</h4>
+					
+					<div class="intro_two">
+						<div class="intro_two_p">
+                                                    <p>
+                                                        In <b style="color:#fec301">NEW START</b>,<br>
+                                                        We have offerors from all over Australia.<br>
+							They are holding 1000+ job opportunities, education and accommodations. 
+                                                        Thousands of refugees are using <b style="color:#fec301">NEW START</b> at this moment.
+                                                        <br><br>
+                                                        Take your first step to settle down in Australia by using <b style="color:#fec301">NEW START</b>.
+                                                         Let opportunities come to you and your family!
+                                                    
+                                                    </p>  
+						</div>
+						<!-- leaflet library -->
+						<div style="border-top: 25px solid black; border-bottom: 25px solid black; display: inline-block;" class="map" id='map'></div>
+							<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+							<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script> 
+							<script type="text/javascript" src='MapScript.js'></script>
+						
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core feature -->
+    <section id="feature" style="padding-top: 80px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Features</h2>
+                    <!-- <h3 class="section-subheading text-muted">We also provide three features to closely ties you and your ideal application.</h3> -->
+                </div>
+            </div>
+			<!-- Row for Refegee and offeroer icon-->
+                    <div class="row text-center"  style="margin-top: 30px;">
+						<div class="col-md-5">
+                            <h3 class="service-heading">If you are an Offeror</h4>
                             <!--icon for refugee-->
                             <img class="rounded-circle img-fluid" src="" alt="">
                         </div>
-                        <div class="col-md-5">
-                            <h4 class="service-heading">If you are a Refugee</h4>
+						
+                        <div class="col-md-5"  style="margin-left: 190px;">
+                            <h3 class="service-heading">If you are a Refugee</h4>
                             <!--icon for offeror-->
                             <img class="rounded-circle img-fluid" src="" alt="">
                         </div>
-                    </div>
-
-                    <!-- Row for Job-->
-                    <div class="row text-center">
+						
+						<!-- Row for Job-->
                         <div class="col-md-5">
                             <h4 class="service-heading">Post Job Ads</h4>
                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -158,37 +190,7 @@
                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                           </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Core feature -->
-    <section id="feature" style="padding-top: 80px; padding-bottom: 40px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Features</h2>
-                    <h3 class="section-subheading text-muted">We also provide three features to closely ties you and your ideal application.</h3>
-                  </div>
-            </div>
-            <div class="row text-center" style="padding-top: 45px;">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-bell-o fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Notification</h4>
-                    <p class="text-muted">This NOTIFICATION in the dashboard will offers you an approach to track application's process and messages, we won't let you miss out any important message.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">My Applications</h4>
-                    <p class="text-muted">If you are an applier, we designed this function in your dashboard to view the details of the application you just applied. </p>
-                </div>
+            <div class="row text-center" style="padding-top: 50px;">
                 <div class="col-md-4">
                   <span class="fa-stack fa-4x">
                       <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -196,6 +198,22 @@
                   </span>
                   <h4 class="service-heading">View all Applicants</h4>
                   <p class="text-muted">If you are an offorer, we designed this function in your dashboard to list how many people applied your advertisement and their details.</p>
+                </div>
+				<div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-bell-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Notification</h4>
+                    <p class="text-muted">This NOTIFICATION in the dashboard will offers you an approach to track application's process and messages, we won't let you miss out any important message.</p>
+                </div>
+                 <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">My Applications</h4>
+                    <p class="text-muted">If you are an applier, we designed this function in your dashboard to view the details of the application you just applied. </p>
                 </div>
             </div>
         </div>
@@ -206,7 +224,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Team Holiday</h2>
+                    <h2 class="section-heading">Team <b style="color:#fec301">Holiday</b></h2>
                     <h1 class="section-subheading text-muted"></h1>
                 </div>
             </div>
@@ -303,7 +321,7 @@
             </div>
         </div>
     </section>
-
+	
     <!-- Contact -->
     <section id="contact" style="padding-top: 80px;">
         <div class="container">
@@ -315,7 +333,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="contactForm" name="sentMessage" novalidate>
+                    <form id="contactForm" action="contact.php" method="post" name="sentMessage" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
